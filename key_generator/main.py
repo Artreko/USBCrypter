@@ -1,10 +1,10 @@
 import wmi
-from generate_key_file import write_key
+from key_generator.generator.generate_key_file import write_key
 
 c = wmi.WMI()
 disks = []
 
-disks = [(drive.Caption, drive.VolumeName, drive.VolumeSerialNumber, drive.Description, drive.DriveType) for drive in c.Win32_LogicalDisk()]
+disks = [(drive.Name, drive.VolumeName, drive.VolumeSerialNumber, drive.Description, drive.DriveType) for drive in c.Win32_LogicalDisk()]
 for i, drive in enumerate(disks):
     print(i, *drive)
     # print(f'{i}: {drive[0]}')
