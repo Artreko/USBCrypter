@@ -18,11 +18,11 @@ for i, drive in enumerate(disks):
 #      'SupportsDiskQuotas': None, 'SupportsFileBasedCompression': None, 'SystemCreationClassName': None,
 #      'SystemName': None, 'VolumeDirty': None, 'VolumeName': None, 'VolumeSerialNumber': None}
 
-num = int(input('Выберите диск: '))
-owner = input('Кому выдан ключ: ')
-lifetime = int(input('Время жизни ключа в минутах: '))
-level = int(input('Уровень доступа: '))
-serial_number = disks[num][1]
-disk = disks[num][0]
+# num = int(input('Выберите диск: '))
+# owner = input('Кому выдан ключ: ')
+# lifetime = int(input('Время жизни ключа в минутах: '))
+# level = int(input('Уровень доступа: '))
+# serial_number = disks[num][1]
+# disk = disks[num][0]
 
-write_key(owner, lifetime, level, serial_number, disk)
+# write_key(owner, lifetime, level, serial_number, disk)

@@ -1,9 +1,9 @@
 from datetime import datetime
-from password_crypt import password_encrypt
+from key_generator.generator.password_crypt import password_encrypt
 from json import dumps
 from base64 import b64encode
 from hashlib import md5
-from generate_key import generate_key
+from key_generator.generator.generate_key import generate_key
 
 
 def _generate_unencrypted_key(owner: str, lifetime: int, level: int) -> str:
