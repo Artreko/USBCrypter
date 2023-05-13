@@ -1,6 +1,6 @@
 import wmi
 import os
-from check_key import read_file
+from key_reader_app.check_key.check_key import read_file
 from datetime import datetime, timedelta
 
 c = wmi.WMI()
