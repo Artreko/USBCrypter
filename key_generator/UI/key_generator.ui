@@ -6,15 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>441</width>
-    <height>442</height>
+    <width>476</width>
+    <height>521</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Генератор ключей</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="key_generator/UI/free-icon-key-file-format-variant-29574.png"/>
+   <iconset>
+    <normaloff>free-icon-key-file-format-variant-29574.png</normaloff>free-icon-key-file-format-variant-29574.png</iconset>
+  </property>
+  <property name="windowFilePath">
+   <string/>
   </property>
   <property name="iconSize">
    <size>
@@ -45,7 +49,41 @@
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="text">
-          <string>Начать поиск USB накопителей</string>
+          <string>Поиск USB накопителей</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="succsesLabel">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto Bk</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: green;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Ключь успешно записан</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -202,6 +240,18 @@
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
          <property name="text">
           <string>Владелец</string>
          </property>
@@ -209,13 +259,25 @@
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
          <property name="text">
           <string>Время жизни ключа</string>
          </property>
         </widget>
        </item>
        <item row="6" column="0">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="generateKeyButton">
          <property name="text">
           <string>Записать ключ</string>
          </property>
@@ -223,13 +285,25 @@
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
          <property name="text">
           <string>Уровень доступа</string>
          </property>
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="cancelButton">
          <property name="text">
           <string>Отменить</string>
          </property>
@@ -260,7 +334,7 @@
           <string/>
          </property>
          <property name="prefix">
-          <string>Уровень</string>
+          <string>Уровень </string>
          </property>
          <property name="minimum">
           <number>1</number>
