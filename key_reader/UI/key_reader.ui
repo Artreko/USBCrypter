@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>675</width>
+    <width>769</width>
     <height>471</height>
    </rect>
   </property>
@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../key_generator/UI/free-icon-key-file-format-variant-29574.png</normaloff>../../key_generator/UI/free-icon-key-file-format-variant-29574.png</iconset>
+    <normaloff>free-icon-key-file-format-variant-29574.png</normaloff>free-icon-key-file-format-variant-29574.png</iconset>
   </property>
   <property name="windowFilePath">
    <string/>
@@ -150,12 +150,24 @@
        </item>
        <item row="2" column="0" colspan="2">
         <widget class="QTableWidget" name="diskTable">
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
          <property name="selectionMode">
           <enum>QAbstractItemView::SingleSelection</enum>
          </property>
          <property name="selectionBehavior">
           <enum>QAbstractItemView::SelectRows</enum>
          </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>130</number>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
          <column>
           <property name="text">
            <string>Диск</string>
@@ -168,12 +180,12 @@
          </column>
          <column>
           <property name="text">
-           <string>Емкость</string>
+           <string>Статус</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Статус</string>
+           <string>Владелец</string>
           </property>
          </column>
          <column>
@@ -236,38 +248,31 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="3" column="0">
+       <item row="4" column="0">
         <widget class="QPushButton" name="pushButton">
          <property name="text">
           <string>Cменить ключь</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QPushButton" name="vsButton">
          <property name="text">
           <string>VS</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="3" column="0" colspan="4">
+        <widget class="QTextBrowser" name="textBrowser"/>
+       </item>
+       <item row="2" column="1">
         <widget class="QPushButton" name="gccButton">
          <property name="text">
           <string>GCC</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="cppbButton">
-         <property name="text">
-          <string>cppBuilder</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="4">
-        <widget class="QTextBrowser" name="textBrowser"/>
-       </item>
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QLabel" name="label">
          <property name="text">
           <string>Уровень 1</string>
@@ -277,7 +282,24 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="2" column="2">
+        <widget class="QPushButton" name="cppbButton">
+         <property name="text">
+          <string>cppBuilder</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Уровень 3</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
         <widget class="QLabel" name="label_2">
          <property name="text">
           <string>Уровень 2</string>
@@ -287,13 +309,17 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="label_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="ownerLabel">
          <property name="text">
-          <string>Уровень 3</string>
+          <string>Owner</string>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="levelLabel">
+         <property name="text">
+          <string>Ваш уровень: </string>
          </property>
         </widget>
        </item>

@@ -37,7 +37,7 @@ class App(QMainWindow):
                        for drive in w.Win32_LogicalDisk()
                        if drive.DriveType == 2]
 
-        print(* self.drives, sep='\n')
+        # print(* self.drives, sep='\n')
         d_count = len(self.drives)
         if d_count > 0:
             self.ui.diskTable.clearContents()
@@ -49,6 +49,7 @@ class App(QMainWindow):
                         size = round(int(d_property) / 1_073_741_824, 1)
                         item.setText(f'{size} GB')
                     self.ui.diskTable.setItem(row, col, item)
+            self.ui.generatorFrame.setEnabled(True)
             self.ui.diskTableFrame.show()
             self.ui.searchFailureLabel.hide()
             self.ui.startFrame.hide()
